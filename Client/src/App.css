@@ -1,0 +1,18 @@
+body {
+  top: 15px !important;
+}
+div#root > .container > .row {
+  flex-direction: row-reverse;
+}
+.form-check > div {
+  display: flex;
+  align-items: center;
+}
+.form-check > div > input {
+  position: inherit !important;
+  margin: 0 5px 0 0 !important;
+}
+
+div#root > .container form .form-check {
+  padding: 0 !important;
+}
