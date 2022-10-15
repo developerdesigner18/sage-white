@@ -33,11 +33,12 @@ function FormCreate({}) {
 
   const handleChange = (idField, event) => {
     const newElements = { ...elements };
+    console.log(newElements,event, "newElement");
     newElements.formData.forEach((field) => {
       const { element, id } = field;
       console.log(field, id, idField, "dddddd");
-      field.options &&
-        field.options.forEach((option) => {
+      field?.options &&
+        field?.options?.forEach((option) => {
           console.log(
             `optionffffffff`,
             option,
@@ -53,7 +54,13 @@ function FormCreate({}) {
             field["value"] = event.target.value;
           }
         });
-      if (id === idField) {
+        if (id === idField) {
+          
+          if (element == "Date") {
+            field["value"] = event;
+          }
+        console.log(element,"datetet");
+
         field["value"] = event.target.value;
       }
       setElements(newElements);

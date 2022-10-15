@@ -5,8 +5,25 @@ import Dropdown from "./elements/Dropdown";
 import RadioButton from "./elements/RadioButton";
 import TextArea from "./elements/TextArea";
 import Email from "./elements/Email";
+import NumberInput from "./elements/NumberInput";
+import RatingComponent from "./elements/Rating";
+import Range from "./elements/Range";
+import DateComponent from "./elements/Date";
 const Element = ({
-  field: { id, element, label, required, value, options },
+  field: {
+    id,
+    element,
+    label,
+    required,
+    value,
+    options,
+    numberOfStars,
+    max,
+    min,
+    step,
+    maxDate,
+    minDate,
+  },
 }) => {
   console.log(value, "lable");
 
@@ -49,10 +66,46 @@ const Element = ({
       );
     case "TextInput":
       return <TextInput id={id} label={label?.blocks[0]?.text} value={value} />;
+    case "NumberInput":
+      return (
+        <NumberInput id={id} label={label?.blocks[0]?.text} value={value} />
+      );
     case "Email":
       return <Email id={id} label={label?.blocks[0]?.text} value={value} />;
     case "TextArea":
       return <TextArea id={id} label={label?.blocks[0]?.text} value={value} />;
+    case "HyperLink":
+      return <TextArea id={id} label={label?.blocks[0]?.text} value={value} />;
+    case "Rating":
+      return (
+        <RatingComponent
+          id={id}
+          label={label?.blocks[0]?.text}
+          value={value}
+          numberOfStars={numberOfStars}
+        />
+      );
+    case "Range":
+      return (
+        <Range
+          id={id}
+          label={label?.blocks[0]?.text}
+          value={value}
+          min={min}
+          max={max}
+          step={step}
+        />
+      );
+    case "Date":
+      return (
+        <DateComponent
+          id={id}
+          label={label?.blocks[0]?.text}
+          value={value}
+          maxDate={maxDate}
+          minDate={minDate}
+        />
+      );
 
     default:
       return null;
