@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { FormContext } from "../../FormContext";
-import Rating from "@mui/material/Rating";
 import { Slider } from "@mui/material";
 const Range = ({ id, label, value, min, max, step }) => {
   console.log(max, "max");

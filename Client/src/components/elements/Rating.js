@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { FormContext } from "../../FormContext";
 import Rating from '@mui/material/Rating';
 const RatingComponent = ({ id, label, value ,numberOfStars}) => {
-  console.log(value, "vvvv");
   const { handleChange } = useContext(FormContext);
   return (
     <div className="mb-3">

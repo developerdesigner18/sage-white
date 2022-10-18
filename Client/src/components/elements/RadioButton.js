@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FormContext } from "../../FormContext";
-const RadioButton = ({ id, label, value, options }) => {
+const RadioButton = ({ id, label, value, options, required }) => {
   const { handleChange } = useContext(FormContext);
 
   return (
@@ -20,6 +20,7 @@ const RadioButton = ({ id, label, value, options }) => {
                 name="radio"
                 onChange={(event) => handleChange(option.id, event)}
                 id={id}
+                required={required}
               />
               <label className="form-check-label" htmlFor="exampleCheck1">
                 {option.value}

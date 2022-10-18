@@ -2,9 +2,9 @@
 const FormBuilder = require("../models/formBuilder");
 
 const getForms = async (req, res) => {
-    console.log(req,"req");
+    console.log(req.params.id,"req");
     try {
-      const Forms = await FormBuilder.find();
+      const Forms = await FormBuilder.findById({_id: req.params.id });
       res.status(200).json(Forms);
     } catch (error) {
       res.status(400).json({ message: error.message });

@@ -9,6 +9,10 @@ import NumberInput from "./elements/NumberInput";
 import RatingComponent from "./elements/Rating";
 import Range from "./elements/Range";
 import DateComponent from "./elements/Date";
+import Label from "./elements/Lable";
+import Header from "./elements/Header";
+import Paragraph from "./elements/Paragraph";
+import LineBreak from "./elements/LineBreak";
 const Element = ({
   field: {
     id,
@@ -62,6 +66,7 @@ const Element = ({
           label={label?.blocks[0]?.text}
           value={value}
           options={options}
+          required={required}
         />
       );
     case "TextInput":
@@ -74,6 +79,16 @@ const Element = ({
       return <Email id={id} label={label?.blocks[0]?.text} value={value} />;
     case "TextArea":
       return <TextArea id={id} label={label?.blocks[0]?.text} value={value} />;
+    case "Header":
+      return <Header id={id} label={label?.blocks[0]?.text} value={value} />;
+    case "Label":
+      return <Label id={id} label={label?.blocks[0]?.text} value={value} />;
+    case "Paragraph":
+      return <Paragraph id={id} label={label?.blocks[0]?.text} value={value} />;
+    case "Signature":
+      return <Paragraph id={id} label={label?.blocks[0]?.text} value={value} />;
+    case "LineBreak":
+      return <LineBreak/>;
     case "HyperLink":
       return <TextArea id={id} label={label?.blocks[0]?.text} value={value} />;
     case "Rating":

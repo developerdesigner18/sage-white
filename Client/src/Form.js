@@ -6,29 +6,35 @@ import Data from "./FormData.json";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function FormCreate({}) {
+function FormCreate() {
   const location = useLocation();
   console.log(location.state,"props");
   const navigate = useNavigate();
-  const [data,setData]= useState([])
   const [elements, setElements] = useState(null);
+  const [TextInput, setTextInput] = useState("")
   // useEffect(() => {
   //   setElements(Data[0]);
   // }, []);
   const handleSubmit = (event) => {
     event.preventDefault();
-    
-    navigate("/");
     console.log(elements, "elelelelele");
+    elements.formData.map(data=>{
+      if(data.required == true ){
+        if(data.value.length==0 || data.value ==0){
+          alert(`required ${data.element}`)
+        }
+        else{
+          navigate("/");
+        }
+      }
+    })
   };
   useEffect(()=>{
-    axios.get(`http://localhost:5000/`).then(res=>{
+    axios.get(`http://localhost:5000/${location.state}`).then(res=>{
     console.log(res.data,"response");  
-    setElements(res.data[0])}).catch(err=>console.log(err))
+    setElements(res.data)}).catch(err=>console.log(err))
   },[])
   const { formData, _id } = elements ?? {};
-  // const { fields, page_label } = elements ?? {};
-  console.log(data,"compare");
   console.log(elements,"compare1");
 
   const handleChange = (idField, event) => {
@@ -55,6 +61,8 @@ function FormCreate({}) {
           }
         });
         if (id === idField) {
+          if(element=="TextInput")
+          setTextInput(event.target.value)
           
           if (element == "Date") {
             field["value"] = event;
@@ -70,7 +78,8 @@ function FormCreate({}) {
   return (
     <FormContext.Provider value={{ handleChange }}>
       <div className="App container">
-        <h3>{_id}</h3>
+        <h3>Dynamic Form ({_id})</h3>
+        {console.log(formData,"fiornrnrnr")}
         <form>
           {formData
             ? formData.map((field, i) => <Element key={i} field={field} />)
