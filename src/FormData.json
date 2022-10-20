@@ -1,0 +1,226 @@
+[
+  {
+    "page_label": "Dynamic Form",
+    "fields": [
+      {
+        "id": "c61f5b4a-9ba4-4fb4-a618-683709240c01",
+        "element": "TextInput",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "blhuh",
+              "text": "Enter the Name",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "required": true,
+        "value": ""
+      },
+      {
+        "id": "dbe1487e-23bf-4089-a496-3a7189b0fd1f",
+        "element": "Email",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "9okor",
+              "text": "Enter the Email",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "required": true,
+        "value": ""
+      },
+      {
+        "id": "3c550abf-160d-4d4c-93a2-b69b3664d992",
+        "element": "Rating",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "9olor",
+              "text": "Enter the Rating",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "required": true,
+        "value": 0,
+        "numberOfStars":5
+      },
+      {
+        "id":"d91dca10-8925-4750-96f7-a83dcba8512f",
+        "element": "Range",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "9olor",
+              "text": "Enter the Rating",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "required": true,
+        "value": 0,
+        "max":5,
+        "min":0,
+        "step":1  
+      },
+      {
+        "id":"9c84d18f-4656-4a21-9a55-a67835407a83",
+        "element": "Date",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "9ooor",
+              "text": "Enter the Date",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "required": true,
+        "value": "2022-10-15T06:35:10.400Z",
+        "maxDate":null,
+        "minDate":null  
+      },
+      {
+        "id": "335d8a07-e115-4228-b74b-94818102be67",
+        "element": "TextArea",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "bi920",
+              "text": "Enter the Description",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "required": true,
+        "value": ""
+      },
+      {
+        "id": "626e79be-91f8-4b6f-8d5e-4f918cc34a77",
+        "element": "Checkboxes",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "at7is",
+              "text": "Make A choice",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "options": [
+          {
+            "id": "ab4caa26-a075-4d52-9f5b-154f2cc2cd19",
+            "value": "Option1",
+            "checked": false
+          },
+          {
+            "id": "6b618902-1ac7-4104-8624-ca871a2c1b4b",
+            "value": "Option2",
+            "checked": false
+          }
+        ],
+        "required": true,
+        "value": ""
+      },
+      {
+        "id": "bdca09c3-8e56-4638-a2ae-9850e7ecd416",
+        "element": "RadioButtons",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "4p4tj",
+              "text": "Select the Option",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "options": [
+          {
+            "id": "e3e445aa-91a8-44c2-9db7-72aa6a2338ec",
+            "value": "Radio1",
+            "checked": false
+          },
+          {
+            "id": "5074c070-c10e-4b4a-94d6-63ca65791381",
+            "value": "Radio2",
+            "checked": false
+          }
+        ],
+        "required": true,
+        "value": ""
+      },
+      {
+        "id": "c61f5b4a-9ba4-4fb4-a618-683709240c10",
+        "element": "Dropdown",
+        "label": {
+          "blocks": [
+            {
+              "data": {},
+              "depth": 0,
+              "entityRanges": [],
+              "inlineStyleRanges": [],
+              "key": "6lei5",
+              "text": "Select the value",
+              "type": "unstyled"
+            }
+          ],
+          "entityMap": {}
+        },
+        "options": [
+          {
+            "id": "ab4caa26-a075-4d52-9f5b-154f2cc2cd19",
+            "value": "Yes"
+          },
+          {
+            "id": "6b618902-1ac7-4104-8624-ca871a2c1b4b",
+            "value": "No "
+          }
+        ],
+        "required": true
+      }
+    ]
+  }
+]
